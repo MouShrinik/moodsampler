@@ -6,6 +6,8 @@ import Image from "next/image";
 import { KeyboardEvent } from "react";
 import Footer from "./components/Footer";
 import Logo from "./components/Logo";
+import GoBackBtn from "./components/GoBackBtn";
+
 
 export default function Home() {
   // state variables
@@ -75,20 +77,22 @@ export default function Home() {
         className="flex flex-col min-h-screen
     bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-gray-800 via-zinc-900 to-gray-800"
       >
-        <div className="">
+        <div className="h-20 w-full flex justify-start items-center">
           <Logo />
         </div>
+        
         <div className="flex h-full w-full flex-col items-center justify-center my-20">
           <div>
             <h1
               className="mb-4 text-3xl font-extrabold text-gray-900
-          md:text-5xl lg:text-6xl tracking-tight m-5 text-transparent
+          md:text-5xl lg:text-6xl tracking-tight text-transparent
           bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500"
             >
               Mood Sampler with AI
             </h1>
           </div>
 
+          
           <div className="bg-slate-800 rounded-lg boder p-2.5 m-8 w-3/4">
             <textarea
               rows={rows}
@@ -111,6 +115,7 @@ export default function Home() {
             >
               Check your mood
             </button>
+           <GoBackBtn />
           </div>
 
           <>
@@ -156,6 +161,7 @@ export default function Home() {
             </div>
           </>
         </div>
+        
       </main>
       <Footer />
     </>
@@ -165,7 +171,7 @@ export default function Home() {
     return (
       <div className="flex justify-center items-center pb-8 m-5">
         <svg
-          height={80}
+          height={40}
           width={80}
           fill="#000000"
           viewBox="0 0 64 64"
